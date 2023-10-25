@@ -15,8 +15,8 @@ First part of the game: Basic Game
   - [] Right arm
   - [] Right leg
   - [] Left leg
-- [] Build keyboard component
-  - [] Add the text for the current word
+- [x] Build keyboard component
+  - [x] Add the text for the current word
 - [] Logic game
 
   - [] Prepare the first word

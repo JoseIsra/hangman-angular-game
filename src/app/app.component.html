@@ -1,1 +1,8 @@
-<p class="text-xl font-bold">Hola prepare setup angular agame</p>
+<main class="w-screen h-screen bg-slate-900 p-5">
+  <h1 class="font-bold text-2xl text-gray-300">Hang man Game 👻</h1>
+
+  <section>
+    <!-- HANGMAN -->
+    <app-keyboard [currentWord]="word" (letterSelected)="handleLetterSelected($event)" />
+  </section>
+</main>

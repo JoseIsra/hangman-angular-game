@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hangman-angular-game';
+  word = 'Javascript';
+
+  handleLetterSelected(letter: string) {
+    console.log('has recibido una letra', letter);
+  }
 }

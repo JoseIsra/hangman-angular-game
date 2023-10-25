@@ -1,0 +1,15 @@
+<section class="flex flex-col gap-10 w-[520px] p-5 rounded-md items-center">
+  <div *ngIf="currentWord.length > 0" class="flex flex-wrap p-2 gap-4">
+    <div *ngFor="let letter2 of gameWord">
+      <span class="uppercase text-slate-200 border-b-4 border-b-slate-300 font-bold text-lg">
+        {{letter2}}
+      </span>
+    </div>
+  </div>
+  <div class="flex flex-wrap justify-center gap-4">
+    <button *ngFor="let letter of alphabet" class="uppercase rounded-md px-4 py-2 bg-slate-300 w-[60px] h-[60px]"
+      (click)="selectLetter(letter)">
+      {{ letter }}
+    </button>
+  </div>
+</section>
