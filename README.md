@@ -4,8 +4,8 @@
 
 ### TO-DO
 
-- [] Install tailwindcss
-- [] Configure linter and prettier
+- [x] Install tailwindcss
+- [x] Configure linter and prettier
 
 First part of the game: Basic Game
 
