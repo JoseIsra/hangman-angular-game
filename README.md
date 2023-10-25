@@ -9,17 +9,17 @@
 
 First part of the game: Basic Game
 
-- [] Build hangman drawing component
-  - [] Head
-  - [] Left arm
-  - [] Right arm
-  - [] Right leg
-  - [] Left leg
+- [x] Build hangman drawing component
+  - [x] Head
+  - [x] Left arm
+  - [x] Right arm
+  - [x] Right leg
+  - [x] Left leg
 - [x] Build keyboard component
   - [x] Add the text for the current word
 - [] Logic game
 
-  - [] Prepare the first word
+  - [x] Prepare the first word
   - [] Logic to select keyboard letters
     - [] Select unique letters
   - [] Logic to handle correct letters

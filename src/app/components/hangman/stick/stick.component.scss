@@ -1,0 +1,21 @@
+.body {
+  transform: rotate(90deg) translateX(25px);
+}
+
+.left-arm {
+  transform: rotate(-45deg) translateX(-20px);
+  width: 40px;
+}
+.right-arm {
+  transform: rotate(40deg) translate(20px, -5px);
+  width: 40px;
+}
+
+.right-leg {
+  transform: rotate(40deg) translate(40px, 28px);
+  width: 40px;
+}
+.left-leg {
+  transform: rotate(-40deg) translate(-40px, 25px);
+  width: 40px;
+}
