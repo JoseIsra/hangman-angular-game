@@ -1,14 +1,36 @@
 <section class="flex flex-col gap-10 w-[520px] p-5 rounded-md items-center">
   <div *ngIf="currentWord.length > 0" class="flex flex-wrap p-2 gap-4">
-    <div *ngFor="let letter2 of gameWord">
-      <span class="uppercase text-slate-200 border-b-4 border-b-slate-300 font-bold text-lg">
-        {{letter2}}
+    <div
+      *ngFor="let letter of gameWord"
+      class="border-b-4 border-b-slate-300 w-[20px]"
+    >
+      <span
+        class="uppercase text-slate-200 font-bold text-lg"
+        [ngClass]="[correctLetters.includes(letter) ? 'visible' : 'invisible']"
+      >
+        {{ letter }}
       </span>
     </div>
   </div>
   <div class="flex flex-wrap justify-center gap-4">
-    <button *ngFor="let letter of alphabet" class="uppercase rounded-md px-4 py-2 bg-slate-300 w-[60px] h-[60px]"
-      (click)="selectLetter(letter)">
+    <button
+      *ngFor="let letter of alphabet"
+      class="uppercase rounded-md px-4 py-2 w-[60px] h-[60px]"
+      [ngClass]="{
+        'opacity-50': selectedLetters.includes(letter.toUpperCase())
+      }"
+      [ngClass]="[
+        correctLetters.includes(letter.toUpperCase())
+          ? 'bg-green-600'
+          : wrongLetters.includes(letter.toUpperCase())
+          ? 'bg-red-600'
+          : 'bg-slate-300'
+      ]"
+      [disabled]="
+        selectedLetters.includes(letter.toUpperCase()) || endGame || playerWon
+      "
+      (click)="selectLetter(letter)"
+    >
       {{ letter }}
     </button>
   </div>

@@ -1,8 +1,31 @@
-<main class="w-screen h-screen bg-slate-900 p-5 grid place-content-center">
+<main class="h-screen bg-slate-900 grid place-content-center overflow-x-hidden">
   <h1 class="text-center font-bold text-3xl text-gray-300">Hang man Game 👻</h1>
-
+  <p *ngIf="victory" class="text-center text-2xl text-white font-bold">
+    Felicidades, bien hecho! 😀
+  </p>
+  <div *ngIf="victory">
+    <button
+      type="button"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      (click)="handleResetGame()"
+    >
+      Volver a jugar
+    </button>
+  </div>
   <section class="flex gap-20 items-center">
-    <app-keyboard [currentWord]="word" (letterSelected)="handleLetterSelected($event)" />
-    <app-hangman />
+    <app-keyboard
+      [endGame]="mistakes === 6"
+      [playerWon]="correctLetters.length === uniqueLetters.length"
+      [currentWord]="word"
+      [correctLetters]="correctLetters"
+      [wrongLetters]="wrongLetters"
+      [selectedLetters]="selectedLetters"
+      (letterSelected)="handleLetterSelected($event)"
+    />
+    <app-hangman
+      [mistakes]="mistakes"
+      [endGame]="mistakes === 6"
+      (resetBtn)="handleResetGame()"
+    />
   </section>
 </main>

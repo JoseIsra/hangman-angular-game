@@ -17,20 +17,20 @@ First part of the game: Basic Game
   - [x] Left leg
 - [x] Build keyboard component
   - [x] Add the text for the current word
-- [] Logic game
+- [x] Logic game
 
   - [x] Prepare the first word
-  - [] Logic to select keyboard letters
-    - [] Select unique letters
-  - [] Logic to handle correct letters
+  - [x] Logic to select keyboard letters
+    - [x] Select unique letters
+  - [x] Logic to handle correct letters
 
-    - [] Disable correct letters selected
-    - [] Render correct letters of the current word on the screen
+    - [x] Disable correct letters selected
+    - [x] Render correct letters of the current word on the screen
 
-  - [] Logic to handle wrong letters
+  - [x] Logic to handle wrong letters
 
-    - [] Disable wrong letters selected
-    - [] Show hangman body parts
-    - [] Finish game if the hangman drawing is completed
+    - [x] Disable wrong letters selected
+    - [x] Show hangman body parts
+    - [x] Finish game if the hangman drawing is completed
 
-  - [] Reset the game
+  - [x] Reset the game

@@ -7,10 +7,16 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class KeyboardComponent implements OnInit {
   @Input({ required: true }) currentWord = '';
+  @Input() selectedLetters: string[] = [];
+  @Input() correctLetters: string[] = [];
+  @Input() wrongLetters: string[] = [];
+  @Input() playerWon = false;
+  @Input() endGame = false;
   @Output() letterSelected = new EventEmitter<string>();
 
   alphabet = [...'abcdefghijklmnñopqrstuvwxyz'];
   gameWord: string[] = [];
+
   ngOnInit(): void {
     this.gameWord = [...this.currentWord];
   }
