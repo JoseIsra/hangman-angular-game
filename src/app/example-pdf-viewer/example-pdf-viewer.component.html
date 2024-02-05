@@ -1,13 +1,8 @@
 <section class="pdfViewer">
-  <ngx-extended-pdf-viewer
+  <pdf-viewer
     src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-    [textLayer]="false"
-    height="500px"
-    [showPrintButton]="false"
-    [showOpenFileButton]="false"
-    [showTextEditor]="false"
-    [showStampEditor]="false"
-    [showDrawEditor]="false"
-    [showSecondaryToolbarButton]="false"
-  />
+    [render-text]="true"
+    [original-size]="false"
+    style="width: 400px; height: 500px"
+  ></pdf-viewer>
 </section>

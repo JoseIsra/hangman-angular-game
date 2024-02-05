@@ -10,10 +10,23 @@ import { StickComponent } from './components/hangman/stick/stick.component';
 import { HangmanDrawingComponent } from './components/hangman/hangman-drawing/hangman-drawing.component';
 import { ExamplePdfViewerComponent } from './example-pdf-viewer/example-pdf-viewer.component';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
-
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 @NgModule({
-  declarations: [AppComponent, KeyboardComponent, HangmanComponent, HeadComponent, StickComponent, HangmanDrawingComponent, ExamplePdfViewerComponent],
-  imports: [BrowserModule, AppRoutingModule, NgxExtendedPdfViewerModule],
+  declarations: [
+    AppComponent,
+    KeyboardComponent,
+    HangmanComponent,
+    HeadComponent,
+    StickComponent,
+    HangmanDrawingComponent,
+    ExamplePdfViewerComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxExtendedPdfViewerModule,
+    PdfViewerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
